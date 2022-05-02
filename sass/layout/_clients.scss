@@ -1,0 +1,44 @@
+/* 
+==========================================
+| clients
+==========================================
+*/
+
+.client__list {
+  display: flex;
+}
+
+.client__item {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.client__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+  color: var(--icon-color);
+  transition-property: color, border, transform;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--cubic-bezier);
+  outline: transparent;
+
+  &:hover,
+  &:focus {
+    border: 1px solid #2196f3;
+    color: #2196f3;
+    transform: scale(1.09);
+  }
+}
+
+.client__icon {
+  display: block;
+  width: 106px;
+  height: 60px;
+  fill: currentColor;
+}

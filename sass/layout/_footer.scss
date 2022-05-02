@@ -1,0 +1,49 @@
+/* 
+==========================================
+| footer
+==========================================
+*/
+
+.footer {
+  background-color: var(--seconadary-bg-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer__container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer__address-box {
+  margin-right: 70px;
+}
+
+.footer__logo {
+  margin-bottom: 20px;
+}
+
+.footer__item {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+}
+
+/* section with socialmedia link */
+
+.footer__title {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-bg-t-color);
+  margin-bottom: 20px;
+}
+
+// footer form
+.footer__subscribe-form {
+  margin-left: auto;
+}

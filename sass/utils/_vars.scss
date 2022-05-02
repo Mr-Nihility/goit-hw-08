@@ -1,0 +1,28 @@
+:root {
+  --main-ff: "Roboto", sans-serif;
+  --logo-ff: "Raleway", sans-serif;
+  --primary-color: #757575;
+  --secondary-color: #212121;
+  --accent-color: #2196f3;
+  --primary-bg-t-color: #ffffff;
+  --seconadary-bg-color: #2f303a;
+  --logo-color-text: #000000;
+  --alternative-bg-color: #f5f4fa;
+  --social-color: #188ce8;
+  --icon-color: #afb1b8;
+  --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration: 250ms;
+}
+
+/*
+   акцент цвет #2196F3
+   фон в секции команда и некоторого текста #E5E5E5
+   вторичный цвет фона ( футера и секции героев) #2F303A;
+   цвет текста в лого: #000000;
+   цвет текста заголовков #212121
+   основной масив текста #757575;
+   основной фон bg и текст контраста #FFFFFF;
+   prymary font-family roboto 400,500,700,900
+   logo ff Raleway 700 
+   кнопка в секции герои при ховере #188CE8
+*/

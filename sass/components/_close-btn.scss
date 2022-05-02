@@ -1,0 +1,39 @@
+/* 
+==========================================
+| close-btn
+==========================================
+*/
+.close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  color: var(--logo-color-text);
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--primary-bg-t-color);
+  transition-property: color, background-color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--cubic-bezier);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    background-color: var(--primary-bg-t-color);
+  }
+}
+
+.close-btn__icon {
+  display: block;
+  fill: currentColor;
+  transition-property: transform;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--cubic-bezier);
+
+  .close-btn:hover & {
+    transform: scale(1.12);
+  }
+}

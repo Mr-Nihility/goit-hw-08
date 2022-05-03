@@ -12,6 +12,12 @@
   }
 }
 
+.card__img {
+  width: 100%;
+  object-fit: fill;
+  // обрати внимание стили для мобильного
+}
+
 .card__meta {
   padding: 20px 23px;
   border: 1px solid #eeeeee;

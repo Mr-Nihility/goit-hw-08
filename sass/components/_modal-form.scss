@@ -73,7 +73,6 @@
 
   .modal-form__input:focus + & {
     color: var(--accent-color);
-    transform: scale(1.1);
   }
 }
 
@@ -87,12 +86,11 @@
 
 .modal-form__custom-checkbox {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-shrink: 0;
   width: 16px;
   height: 15px;
-  margin-right: 7px;
+  margin-right: 8px;
 
   border: 2px solid var(--secondary-color);
   border-radius: 2px;
@@ -103,6 +101,10 @@
   .modal-form__checkbox:checked + & {
     border-color: transparent;
     background-color: var(--accent-color);
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
   }
 }
 
@@ -118,10 +120,15 @@
 }
 
 .modal-form__chexbox-title {
-  font-size: 14px;
-  line-height: 1.71;
+  display: flex;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
-  margin-right: 4px;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .modal-form__link {

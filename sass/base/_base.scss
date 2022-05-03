@@ -12,42 +12,46 @@ body {
 /* sections */
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and(min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .section-title {
   margin-top: 0px;
   margin-bottom: 50px;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
   color: var(--secondary-color);
+
+  @media screen and(min-width: 1200px) {
+    font-size: 36px;
+  }
 }
 
 /* wrapper container */
 .container {
-  outline: 1px solid tomato;
-
-  width: 100%;
+  // outline: 1px solid tomato;
   margin-left: auto;
   margin-right: auto;
   padding: 0 15px;
 
   @media screen and (min-width: 480px) {
     width: 480px;
-    // падинги
   }
 
   @media screen and (min-width: 768px) {
     width: 768px;
-    // padding
   }
 
   @media screen and (min-width: 1200px) {
     width: 1200px;
-    // padding
   }
 }
 

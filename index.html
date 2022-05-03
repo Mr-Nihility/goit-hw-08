@@ -62,12 +62,79 @@
             </a>
           </li>
         </ul>
+        <!-- Mobile burger -->
+        <button
+          class="burger__button"
+          type="button"
+          data-menu-button
+          aria-expanded="false"
+        >
+          <svg class="burger__icon" width="40" height="40">
+            <use
+              class="burger__icon-open"
+              href="./images/icons.svg#menu-icon-open"
+            ></use>
+            <use
+              class="burger__icon-close"
+              href="./images/icons.svg#menu-icon-close"
+            ></use>
+          </svg>
+        </button>
+        <div class="burger" data-menu>
+          <nav class="burger__navigation">
+            <ul class="navigation__list list">
+              <li class="navigation__item">
+                <a href="./index.html" class="navigation__link link">
+                  Студия
+                </a>
+              </li>
+              <li class="navigation__item">
+                <a href="./portfolio.html" class="navigation__link link"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a href="" class="navigation__link link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="burger__contacts list">
+            <li class="burger__item">
+              <a
+                class="burger__link link burger__link--big"
+                href="tel:+380961111111"
+              >
+                +38 096 111 11 11
+              </a>
+            </li>
+            <li class="burger__item">
+              <a class="burger__link link" href="mailto:info@devstudio.com">
+                info@devstudio.com
+              </a>
+            </li>
+          </ul>
+          <ul class="list burger__socials">
+            <li class="socials__item">
+              <a class="socials__link link" href="#">Instagram</a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link link" href="#">Twitter</a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link link" href="#">Facebook</a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link link" href="#">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
     <!--uniq content-->
     <main>
-      <!--Heroes-->
+      <!-- Heroes-->
+
       <section class="hero">
         <div class="container">
           <h1 class="hero__title title">
@@ -82,7 +149,6 @@
       <!--features-->
       <section class="features section">
         <div class="container">
-          <!-- заголовок секции для семантики -->
           <h2 class="visually-hidden" aria-hidden="true" tabindex="-1">
             Наши преимущества
           </h2>
@@ -194,7 +260,6 @@
                   Product Designer
                 </p>
 
-                <!-- socialmedia -->
                 <ul class="socialmedia list">
                   <li class="socialmedia__item">
                     <a
@@ -469,7 +534,7 @@
                 rel="noopener noreferrer"
                 aria-label="company 1"
               >
-                <svg class="client__icon" width="41" height="47">
+                <svg class="client__icon" width="106" height="60">
                   <use href="./images/icons.svg#company-1"></use>
                 </svg>
               </a>
@@ -482,7 +547,7 @@
                 rel="noopener noreferrer"
                 aria-label="company 2"
               >
-                <svg class="client__icon" width="40" height="52">
+                <svg class="client__icon" width="106" height="60">
                   <use href="./images/icons.svg#company-2"></use>
                 </svg>
               </a>
@@ -495,7 +560,7 @@
                 rel="noopener noreferrer"
                 aria-label="company 3"
               >
-                <svg class="client__icon" width="44" height="41">
+                <svg class="client__icon" width="106" height="60">
                   <use href="./images/icons.svg#company-3"></use>
                 </svg>
               </a>
@@ -508,7 +573,7 @@
                 rel="noopener noreferrer"
                 aria-label="company 4"
               >
-                <svg class="client__icon" width="84" height="41">
+                <svg class="client__icon" width="106" height="60">
                   <use href="./images/icons.svg#company-4"></use>
                 </svg>
               </a>
@@ -521,7 +586,7 @@
                 rel="noopener noreferrer"
                 aria-label="company 5"
               >
-                <svg class="client__icon" width="63" height="45">
+                <svg class="client__icon" width="106" height="60">
                   <use href="./images/icons.svg#company-5"></use>
                 </svg>
               </a>
@@ -534,7 +599,7 @@
                 rel="noopener noreferrer"
                 aria-label="company 6"
               >
-                <svg class="client__icon" width="94" height="44">
+                <svg class="client__icon" width="106" height="60">
                   <use href="./images/icons.svg#company-6"></use>
                 </svg>
               </a>
@@ -547,15 +612,14 @@
     <!--footer-->
     <footer class="footer">
       <div class="container footer__container">
-        <!-- footer adress -->
         <div class="footer__address-box">
           <a href="#" class="logo footer__logo">
             <span class="logo__start logo__start--blue">Web</span>
             <span class="logo__end logo__end--white">Studio</span>
           </a>
-          <!--contacts-->
+
           <address>
-            <ul class="contacts list">
+            <ul class="contacts list footer__contacts">
               <li class="contacts__item footer__item">
                 <a
                   href="https://goo.gl/maps/ko31hHhUW7KVigs66"
@@ -581,11 +645,9 @@
           </address>
         </div>
 
-        <!-- footer socials media -->
         <div class="footer__socialmedia-box">
           <b class="footer__title">присоединяйтесь</b>
 
-          <!--socialslinks-->
           <ul class="socialmedia list">
             <li class="socialmedia__item">
               <a
@@ -662,7 +724,6 @@
           </ul>
         </div>
 
-        <!-- footer form -->
         <form
           class="subscribe-form footer__subscribe-form"
           method="post"
@@ -779,9 +840,9 @@
               </svg>
             </span>
             <span class="modal-form__chexbox-title">
-              Соглашаюсь с рассылкой и принимаю
+              <span>Соглашаюсь с рассылкой и принимаю</span>
+              <a class="modal-form__link" href="#">Условия договора</a>
             </span>
-            <a class="modal-form__link" href="#">Условия договора</a>
           </label>
 
           <!-- button submit -->
@@ -793,5 +854,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

@@ -6,19 +6,59 @@
 
 .header {
   border-bottom: 1px solid #ececec;
+  padding: 16px 0;
+
+  @media screen and (min-width: 768px) {
+    padding: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 0;
+  }
 }
 
 .header__container {
   display: flex;
-  justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 767px) {
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
+  }
 }
 
 .header__logo {
-  margin-right: 93px;
+  @media screen and (min-width: 768px) {
+    margin-right: 84px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
 }
 
 .header__contacts {
-  display: flex;
-  margin-left: auto;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
 }

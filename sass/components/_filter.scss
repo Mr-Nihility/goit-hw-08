@@ -1,14 +1,30 @@
 /* filter menu */
 
 .filter {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 
 .filter__item {
+  display: inline-block;
+  margin-bottom: 15px;
   &:not(:last-child) {
     margin-right: 8px;
+  }
+
+  &:nth-last-child(-n + 2) {
+    margin-bottom: 0;
   }
 }
 /* ======================================================================== */

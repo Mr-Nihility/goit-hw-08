@@ -1,0 +1,149 @@
+//   burger-menu
+// mobile button
+.burger__button {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.burger__icon {
+  color: currentColor;
+
+  .burger__button:hover &,
+  .burger__button:focus & {
+    color: var(--accent-color);
+  }
+}
+
+.burger__icon-open {
+  opacity: 1;
+
+  .burger__button.is-open & {
+    opacity: 0;
+  }
+}
+
+.burger__icon-close {
+  opacity: 0;
+
+  .burger__button.is-open & {
+    opacity: 1;
+  }
+}
+
+// mobile menu window
+.burger {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  padding: 48px 40px;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  overflow-y: scroll;
+  transform: translateX(100%);
+  transition: transform 250ms var(--cubic-bezier);
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+// mobile navigation
+.navigation__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+.navigation__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: #212121;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+//mobile contacts
+
+.burger__contacts {
+  margin-top: auto;
+  margin-bottom: 64px;
+}
+
+.burger__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.burger__link {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: #757575;
+
+  &--big {
+    font-size: 34px;
+    color: var(--accent-color);
+
+    @media screen and (max-width: 479px) {
+      font-size: 24px;
+    }
+  }
+}
+
+//mobile socials
+
+.burger__socials {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+.socials__item {
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: " ";
+    display: block;
+    margin-left: 10px;
+    width: 2px;
+    height: 22px;
+    background-color: rgba(33, 33, 33, 0.2);
+  }
+
+  &:last-child::after {
+    display: none;
+  }
+}
+
+.socials__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+}

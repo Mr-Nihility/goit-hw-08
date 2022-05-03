@@ -1,16 +1,12 @@
 /* contacts */
 
-.contacts {
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
-}
 .contacts__item {
   &:not(:last-child) {
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
       margin-bottom: 10px;
     }
-    @media screen and (min-width: 1200px) {
+
+    @include mq(desktop) {
       margin-right: 50px;
     }
   }

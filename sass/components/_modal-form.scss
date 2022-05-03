@@ -3,11 +3,11 @@
 | modal-form
 ==========================================
 */
-.modal-form {
-  // @include mq(mobile-only) {
-  //   margin: 0 auto;
-  // }
-}
+// .modal-form {
+//   @include mq(mobile-only) {
+//     margin: 0 auto;
+//   }
+// }
 
 .modal-form__title {
   display: block;
@@ -26,8 +26,11 @@
   &:last-of-type {
     display: flex;
     justify-content: center;
-    align-items: center;
     margin-bottom: 30px;
+
+    @include mq(mobile) {
+      align-items: center;
+    }
   }
 }
 
@@ -108,7 +111,7 @@
     background-color: var(--accent-color);
   }
 
-  @media screen and (min-width: 1200px) {
+  @include mq(desktop) {
     justify-content: center;
   }
 }

@@ -2,12 +2,10 @@
 // mobile button
 .burger__button {
   position: relative;
-  z-index: 100;
+  z-index: 20;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
   background-color: transparent;
   border: none;
 
@@ -17,6 +15,11 @@
 }
 
 .burger__icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: currentColor;
 
   .burger__button:hover &,
@@ -58,6 +61,7 @@
 
   &.is-open {
     transform: translateX(0);
+    z-index: 10;
   }
 
   @media screen and (min-width: 768px) {

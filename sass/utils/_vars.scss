@@ -1,6 +1,9 @@
 :root {
+  // fonts
   --main-ff: "Roboto", sans-serif;
   --logo-ff: "Raleway", sans-serif;
+
+  // colors
   --primary-color: #757575;
   --secondary-color: #212121;
   --accent-color: #2196f3;
@@ -10,10 +13,19 @@
   --alternative-bg-color: #f5f4fa;
   --social-color: #188ce8;
   --icon-color: #afb1b8;
+
+  // timing function
   --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
   --duration: 250ms;
+
+  // ident and item for grid
   --ident: 30px;
   --item: 1;
+
+  // flex basic
+  --formula-width: calc(
+    (100% - (var(--ident) * (var(--item) - 1))) / (var(--item))
+  );
 }
 
 /*

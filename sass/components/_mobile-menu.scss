@@ -21,10 +21,11 @@
   justify-content: center;
   align-items: center;
   color: currentColor;
+  transition: color var(--duration) var(--cubic-bezier);
 
   .burger__button:hover &,
   .burger__button:focus & {
-    color: var(--accent-color);
+    fill: var(--accent-color);
   }
 }
 
@@ -33,6 +34,7 @@
 
   .burger__button.is-open & {
     opacity: 0;
+    color: currentColor;
   }
 }
 
@@ -70,17 +72,23 @@
 }
 
 // mobile navigation
+
 .navigation__item {
   &:not(:last-child) {
     margin-bottom: 32px;
   }
 }
+
 .navigation__link {
   font-weight: 500;
   font-size: 40px;
   line-height: 1.18;
   letter-spacing: 0.02em;
   color: #212121;
+
+  &--current {
+    color: var(--accent-color);
+  }
 
   &:hover,
   &:focus {

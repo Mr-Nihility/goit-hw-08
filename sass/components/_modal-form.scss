@@ -3,6 +3,11 @@
 | modal-form
 ==========================================
 */
+.modal-form {
+  // @include mq(mobile-only) {
+  //   margin: 0 auto;
+  // }
+}
 
 .modal-form__title {
   display: block;
@@ -113,6 +118,7 @@
   transition-property: fill, transform;
   transition-duration: var(--duration);
   transition-timing-function: var(--cubic-bezier);
+  align-self: start;
 
   .modal-form__checkbox:checked + .modal-form__custom-checkbox > & {
     fill: var(--primary-bg-t-color);
@@ -120,12 +126,15 @@
 }
 
 .modal-form__chexbox-title {
-  display: flex;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.03em;
 
-  @media screen and (min-width: 1200px) {
+  @include mq(mobile) {
+    display: flex;
+  }
+
+  @include mq(desktop) {
     font-size: 14px;
     line-height: 1.71;
   }

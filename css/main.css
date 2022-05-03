@@ -15,6 +15,9 @@
   --duration: 250ms;
   --ident: 30px;
   --item: 1;
+  --formula-width: calc(
+    (100% - (var(--ident) * (var(--item) - 1))) / (var(--item))
+  );
 }
 
 /*
@@ -53,6 +56,10 @@ body {
   line-height: 1.14;
   letter-spacing: 0.03em;
   background-color: var(--primary-bg-t-color);
+}
+
+body.no-scroll {
+  overflow: hidden;
 }
 
 /* sections */
@@ -267,6 +274,7 @@ svg {
   display: flex;
   align-items: center;
   font-weight: 500;
+  font-size: 12px;
   letter-spacing: 0.02em;
   transition-property: color;
   transition-duration: var(--duration);
@@ -288,12 +296,27 @@ svg {
   letter-spacing: inherit;
 }
 
+@media screen and (min-width: 1200px) {
+  .contacts__link {
+    font-size: 14px;
+  }
+}
+
 .contacts__icon {
-  width: 16px;
-  height: 16px;
   margin-left: auto;
   fill: currentColor;
   margin-right: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__icon--mail {
+    width: 16px;
+    height: 12px;
+  }
+  .contacts__icon--phone {
+    widows: 10px;
+    height: 16px;
+  }
 }
 
 /* 
@@ -330,7 +353,6 @@ svg {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 40px;
   background-color: var(--primary-bg-t-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -339,19 +361,27 @@ svg {
 @media screen and (max-width: 479px) {
   .modal {
     width: calc(100% - 10px);
-    padding: 40px 15px;
+    padding: 40px 20px;
   }
 }
 
 @media screen and (min-width: 480px) {
   .modal {
     width: 450px;
+    padding: 40px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 767px) {
+  .modal {
+    transform: translate(-50%, 0);
+    top: 5px;
   }
 }
 
@@ -515,6 +545,7 @@ svg {
   transition-property: fill, transform;
   transition-duration: var(--duration);
   transition-timing-function: var(--cubic-bezier);
+  align-self: start;
 }
 
 .modal-form__checkbox:checked + .modal-form__custom-checkbox > .modal-form__checkbox-icon {
@@ -522,10 +553,15 @@ svg {
 }
 
 .modal-form__chexbox-title {
-  display: flex;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 480px) {
+  .modal-form__chexbox-title {
+    display: flex;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -850,11 +886,12 @@ svg {
   justify-content: center;
   align-items: center;
   color: currentColor;
+  transition: color var(--duration) var(--cubic-bezier);
 }
 
 .burger__button:hover .burger__icon,
 .burger__button:focus .burger__icon {
-  color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 .burger__icon-open {
@@ -863,6 +900,7 @@ svg {
 
 .burger__button.is-open .burger__icon-open {
   opacity: 0;
+  color: currentColor;
 }
 
 .burger__icon-close {
@@ -909,6 +947,10 @@ svg {
   line-height: 1.18;
   letter-spacing: 0.02em;
   color: #212121;
+}
+
+.navigation__link--current {
+  color: var(--accent-color);
 }
 
 .navigation__link:hover, .navigation__link:focus {
@@ -1096,7 +1138,7 @@ svg {
   color: var(--primary-bg-t-color);
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 480px) {
   .hero__title {
     width: 361px;
   }
@@ -1510,6 +1552,10 @@ svg {
     margin-bottom: 10px;
     margin-right: 0;
   }
+}
+
+.footer__link {
+  font-size: 14px;
 }
 
 /* section with socialmedia link */

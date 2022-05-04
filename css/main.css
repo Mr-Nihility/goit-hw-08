@@ -279,10 +279,6 @@ svg {
   color: var(--accent-color);
 }
 
-.contacts__link--white {
-  color: var(--primary-bg-t-color);
-}
-
 .contacts__link--small {
   font-style: normal;
   line-height: 1.71;
@@ -356,6 +352,7 @@ svg {
   .modal {
     width: calc(100% - 10px);
     padding: 40px 20px;
+    transform: translate(-50%, -45%);
   }
 }
 
@@ -831,6 +828,13 @@ svg {
   transition-timing-function: var(--cubic-bezier);
 }
 
+@media screen and (min-width: 320px) {
+  .card__description {
+    font-size: 15px;
+    padding: 10px 30px;
+  }
+}
+
 .card:hover .card__description {
   transform: translateY(0);
 }
@@ -994,18 +998,31 @@ svg {
   gap: 10px;
 }
 
+@media screen and (max-width: 479px) {
+  .burger__socials {
+    gap: 5px;
+  }
+}
+
 .socials__item {
   display: flex;
   align-items: center;
 }
 
 .socials__item::after {
+  margin-left: 5px;
   content: " ";
   display: block;
-  margin-left: 10px;
   width: 2px;
-  height: 22px;
+  height: 14px;
   background-color: rgba(33, 33, 33, 0.2);
+}
+
+@media screen and (min-width: 480px) {
+  .socials__item::after {
+    margin-left: 10px;
+    height: 22px;
+  }
 }
 
 .socials__item:last-child::after {
@@ -1018,6 +1035,12 @@ svg {
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: #2196f3;
+}
+
+@media screen and (max-width: 479px) {
+  .socials__link {
+    font-size: 12px;
+  }
 }
 
 /* 
@@ -1248,7 +1271,7 @@ svg {
   color: var(--secondary-color);
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .feature__subtitle {
     text-align: start;
   }
@@ -1395,8 +1418,15 @@ svg {
 }
 
 .client__item {
-  flex-basis: 210px;
+  min-width: 130px;
   margin: 15px;
+  flex-grow: 1;
+}
+
+@media screen and (min-width: 480px) {
+  .client__item {
+    flex-basis: 210px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1536,6 +1566,11 @@ svg {
 
 .footer__link {
   font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer__link--white {
+  color: var(--primary-bg-t-color);
 }
 
 /* section with socialmedia link */
@@ -1549,6 +1584,12 @@ svg {
   text-transform: uppercase;
   color: var(--primary-bg-t-color);
   margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__title {
+    text-align: start;
+  }
 }
 
 @media screen and (min-width: 1200px) {

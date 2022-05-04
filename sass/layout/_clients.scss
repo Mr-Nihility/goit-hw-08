@@ -15,8 +15,13 @@
 }
 
 .client__item {
-  flex-basis: 210px;
+  min-width: 130px;
   margin: 15px;
+  flex-grow: 1;
+
+  @include mq(mobile) {
+    flex-basis: 210px;
+  }
 
   @include mq(tablet) {
     flex-basis: 226px;

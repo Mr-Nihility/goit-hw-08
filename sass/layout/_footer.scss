@@ -92,6 +92,11 @@
 
 .footer__link {
   font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+
+  &--white {
+    color: var(--primary-bg-t-color);
+  }
 }
 
 /* section with socialmedia link */
@@ -106,6 +111,10 @@
   text-transform: uppercase;
   color: var(--primary-bg-t-color);
   margin-bottom: 20px;
+
+  @include mq(desktop) {
+    text-align: start;
+  }
 }
 
 // footer form

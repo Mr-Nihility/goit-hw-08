@@ -133,18 +133,28 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 10px;
+
+  @media screen and (max-width: 479px) {
+    gap: 5px;
+  }
 }
+
 .socials__item {
   display: flex;
   align-items: center;
 
   &::after {
+    margin-left: 5px;
     content: " ";
     display: block;
-    margin-left: 10px;
     width: 2px;
-    height: 22px;
+    height: 14px;
     background-color: rgba(33, 33, 33, 0.2);
+
+    @media screen and (min-width: 480px) {
+      margin-left: 10px;
+      height: 22px;
+    }
   }
 
   &:last-child::after {
@@ -158,4 +168,8 @@
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: #2196f3;
+
+  @media screen and (max-width: 479px) {
+    font-size: 12px;
+  }
 }

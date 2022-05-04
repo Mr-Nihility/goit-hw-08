@@ -1395,11 +1395,14 @@ svg {
   flex-wrap: wrap;
 }
 
-@media screen and (max-width: 767px) {
+.client__item {
+  flex-basis: calc((100% - (var(--ident) * (var(--item) - 1))) / (var(--item)));
+}
+
+@media screen and (max-width: 767.98px) {
   .client__item {
     --ident: 30px;
     --item: 2;
-    flex-basis: calc( (100% - (var(--ident) * (var(--item) - 1))) / (var(--item)));
     margin-right: 30px;
     margin-bottom: 30px;
   }
@@ -1411,13 +1414,12 @@ svg {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .client__item {
     margin-right: 30px;
     margin-bottom: 30px;
     --ident: 30px;
     --item: 3;
-    flex-basis: calc( (100% - (var(--ident) * (var(--item) - 1))) / (var(--item)));
   }
   .client__item:nth-child(3n) {
     margin-right: 0;
@@ -1431,7 +1433,6 @@ svg {
   .client__item {
     --ident: 30px;
     --item: 6;
-    flex-basis: calc( (100% - (var(--ident) * (var(--item) - 1))) / (var(--item)));
   }
   .client__item:not(:last-child) {
     margin-right: 30px;

@@ -10,12 +10,10 @@
 }
 
 .client__item {
-  @media screen and (max-width: 767px) {
+  flex-basis: calc((100% - (var(--ident) * (var(--item) - 1))) / (var(--item)));
+  @include mq(mobile-only) {
     --ident: 30px;
     --item: 2;
-    flex-basis: calc(
-      (100% - (var(--ident) * (var(--item) - 1))) / (var(--item))
-    );
     margin-right: 30px;
     margin-bottom: 30px;
 
@@ -28,14 +26,11 @@
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @include mq(tablet-only) {
     margin-right: 30px;
     margin-bottom: 30px;
     --ident: 30px;
     --item: 3;
-    flex-basis: calc(
-      (100% - (var(--ident) * (var(--item) - 1))) / (var(--item))
-    );
 
     &:nth-child(3n) {
       margin-right: 0;
@@ -45,12 +40,9 @@
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @include mq(desktop) {
     --ident: 30px;
     --item: 6;
-    flex-basis: calc(
-      (100% - (var(--ident) * (var(--item) - 1))) / (var(--item))
-    );
 
     &:not(:last-child) {
       margin-right: 30px;

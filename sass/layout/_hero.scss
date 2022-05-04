@@ -10,21 +10,69 @@
   padding-top: 118px;
   padding-bottom: 118px;
   background-color: var(--seconadary-bg-color);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
-  @media screen and(min-width: 1200px) {
-    padding-top: 200px;
-    padding-bottom: 200px;
+  // bg small
+  background-image: linear-gradient(
+      to top,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero/hero__s.jpg);
+
+  // 2x
+  @include mq(retina) {
     background-image: linear-gradient(
         to top,
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../images/hero/hero.jpg);
-    background-color: var(--seconadary-bg-color);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    animation: bg-move 20s ease-in infinite both;
+      url(../images/hero/hero@2x__s.jpg);
+  }
+
+  //bg medium
+  @include mq(tablet) {
+    background-image: linear-gradient(
+        to top,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero/hero__m.jpg);
+
+    // 2x
+    @include mq(retina) {
+      background-image: linear-gradient(
+          to top,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero/hero@2x__m.jpg);
+    }
+  }
+
+  //bg large
+  @include mq(desktop) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    background-image: linear-gradient(
+        to top,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero/hero__l.jpg);
+
+    // 2x
+    @include mq(retina) {
+      background-image: linear-gradient(
+          to top,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero/hero@2x__l.jpg);
+    }
   }
 }
 
@@ -41,26 +89,17 @@
   text-transform: uppercase;
   color: var(--primary-bg-t-color);
 
-  @media screen and(min-width: 480px) {
+  @include mq(mobile) {
     width: 361px;
   }
 
-  @media screen and(min-width: 1200px) {
+  @include mq(desktop) {
     width: 696px;
     font-size: 44px;
     line-height: 1.36;
   }
 }
 
-/* --------------------анимация фона секции---------------------------- */
-@keyframes bg-move {
-  0% {
-    background-size: 110%;
-  }
-  100% {
-    background-size: 150%;
-  }
-}
 /* 
 ==========================================
 | hero button

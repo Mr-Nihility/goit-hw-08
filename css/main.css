@@ -1099,18 +1099,41 @@ svg {
   padding-top: 118px;
   padding-bottom: 118px;
   background-color: var(--seconadary-bg-color);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero__s.jpg);
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (-moz-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero@2x__s.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero__m.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-moz-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero@2x__m.jpg);
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
-    background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero.jpg);
-    background-color: var(--seconadary-bg-color);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    animation: bg-move 20s ease-in infinite both;
+    background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero__l.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-moz-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero@2x__l.jpg);
   }
 }
 
@@ -1138,16 +1161,6 @@ svg {
     width: 696px;
     font-size: 44px;
     line-height: 1.36;
-  }
-}
-
-/* --------------------анимация фона секции---------------------------- */
-@keyframes bg-move {
-  0% {
-    background-size: 110%;
-  }
-  100% {
-    background-size: 150%;
   }
 }
 
@@ -1426,6 +1439,7 @@ svg {
 }
 
 .client__link {
+  height: 92px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1481,10 +1495,8 @@ svg {
 }
 
 .footer__address-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin-bottom: 60px;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -1497,19 +1509,20 @@ svg {
   .footer__address-box {
     margin-right: 70px;
     margin-bottom: 0;
-  }
-}
-
-@media screen and (max-width: 1199px) {
-  .footer__address {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: start;
   }
 }
 
 .footer__logo {
+  display: inline-flex;
   margin-bottom: 20px;
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__logo {
+    text-align: start;
+  }
 }
 
 .footer__socialmedia-box {
@@ -1528,7 +1541,7 @@ svg {
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199.98px) {
   .footer__contacts {
     display: flex;
     flex-direction: column;
@@ -1536,7 +1549,12 @@ svg {
   }
 }
 
-@media screen and (min-width: 1200px) {
+.footer__item:not(:last-child) {
+  margin-bottom: 8px;
+  margin-right: 0;
+}
+
+@media screen and (min-width: 480px) {
   .footer__item:not(:last-child) {
     margin-bottom: 10px;
     margin-right: 0;

@@ -15,59 +15,61 @@
   flex-direction: column;
   align-items: center;
 
-  @media screen and (min-width: 768px) {
+  @include mq(tablet) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: baseline;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include mq(desktop) {
     align-items: baseline;
   }
 }
 
 .footer__address-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin-bottom: 60px;
+  text-align: center;
 
-  @media screen and (min-width: 768px) {
+  @include mq(tablet) {
     margin-right: 165px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include mq(desktop) {
     margin-right: 70px;
     margin-bottom: 0;
+    text-align: start;
   }
 }
 
-.footer__address {
-  @media screen and (max-width: 1199px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
+// .footer__address {
+//
+// }
+
 .footer__logo {
+  display: inline-flex;
   margin-bottom: 20px;
+  text-align: center;
+
+  @include mq(desktop) {
+    text-align: start;
+  }
 }
 
 .footer__socialmedia-box {
   margin-bottom: 60px;
 
-  @media screen and (min-width: 768px) {
+  @include mq(tablet) {
     margin-bottom: 0;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include mq(desktop) {
     margin-bottom: 0;
   }
 }
 
 .footer__contacts {
-  @media screen and (max-width: 1200px) {
+  @include mq(notDesktop) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,7 +77,12 @@
 }
 
 .footer__item {
-  @media screen and (min-width: 1200px) {
+  &:not(:last-child) {
+    margin-bottom: 8px;
+    margin-right: 0;
+  }
+
+  @include mq(mobile) {
     &:not(:last-child) {
       margin-bottom: 10px;
       margin-right: 0;
@@ -103,7 +110,7 @@
 
 // footer form
 .footer__subscribe-form {
-  @media screen and (min-width: 1200px) {
+  @include mq(desktop) {
     margin-left: auto;
   }
 }

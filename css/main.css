@@ -1395,6 +1395,12 @@ svg {
   flex-wrap: wrap;
 }
 
+@media screen and (min-width: 1200px) {
+  .client__list {
+    flex-wrap: nowrap;
+  }
+}
+
 .client__item {
   flex-basis: calc((100% - (var(--ident) * (var(--item) - 1))) / (var(--item)));
 }
